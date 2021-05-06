@@ -51,23 +51,7 @@ struct ContentView : View {
                                                      action: { game.update(sliderValue: roundedValue) }))
             })
         }
-        .background(ZStack {
-            Circle()
-                .fill(Color.red)
-                .padding(20)
-            Circle()
-                .fill(Color.white)
-                .padding(40)
-            Circle()
-                .fill(Color.red)
-                .padding(60)
-            Circle()
-                .fill(Color.white)
-                .padding(80)
-            Circle()
-                .fill(Color.red)
-                .padding(100)
-        }.opacity(0.3))
+        .background(BackgroundView(color: .blue))
     }
 }
 
