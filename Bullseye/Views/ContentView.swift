@@ -51,6 +51,23 @@ struct ContentView : View {
                                                      action: { game.update(sliderValue: roundedValue) }))
             })
         }
+        .background(ZStack {
+            Circle()
+                .fill(Color.red)
+                .padding(20)
+            Circle()
+                .fill(Color.white)
+                .padding(40)
+            Circle()
+                .fill(Color.red)
+                .padding(60)
+            Circle()
+                .fill(Color.white)
+                .padding(80)
+            Circle()
+                .fill(Color.red)
+                .padding(100)
+        }.opacity(0.3))
     }
 }
 
@@ -58,5 +75,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .previewLayout(.fixed(width: 568, height: 320))
+        ContentView()
+            .previewLayout(.fixed(width: 320, height: 568))
     }
 }
